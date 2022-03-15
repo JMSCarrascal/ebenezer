@@ -6,7 +6,8 @@ use App\Models\User;
 
 
 
-Route::get('/', [UsersController::class, 'index'])->name('admin.users.index');
+//Users route
+Route::get('/users', [UsersController::class, 'index'])->name('admin.users.index');
 Route::get('/create', [UsersController::class, 'create'])->name('admin.users.create');
 Route::get('/store', [UsersController::class, 'store'])->name('admin.users.store');
 // Route::get('/{user}/show', [UsersController::class, 'show'])->name('admin.users.show');
