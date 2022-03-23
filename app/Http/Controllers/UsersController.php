@@ -7,9 +7,14 @@ use App\Models\User;
 
 class UsersController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.users.index');
+        // $users = new User();
+        // $users = $request->orderBy('id','DESC')->paginate(10);
+        // return view('admin.users.index', compact('users'));
+        $users = User::all();
+        return view('admin.users.index', compact('users'));
+
     }
 
     public function create()
